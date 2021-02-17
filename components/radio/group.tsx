@@ -41,6 +41,7 @@ const RadioGroup = React.forwardRef<HTMLDivElement, RadioGroupProps>((props, ref
       id,
       onMouseEnter,
       onMouseLeave,
+      ...rest
     } = props;
     const prefixCls = getPrefixCls('radio', customizePrefixCls);
     const groupPrefixCls = `${prefixCls}-group`;
@@ -97,6 +98,7 @@ const RadioGroup = React.forwardRef<HTMLDivElement, RadioGroupProps>((props, ref
         onMouseLeave={onMouseLeave}
         id={id}
         ref={ref}
+        {...rest}
       >
         {childrenToRender}
       </div>
